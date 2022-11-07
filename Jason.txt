@@ -1,2 +1,6 @@
 Hello World !
+<<<<<<< HEAD
 New branch
+=======
+Changement de branche
+>>>>>>> xavier
