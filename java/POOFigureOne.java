@@ -51,14 +51,13 @@ class Rectangle extends Point
     }
 }
 
-class Carre extends Point
+class Carre extends Rectangle
 {
     int cote;
 
     public Carre(int x, int y, int c)
     {
-        super(x,y);
-        this.cote = c;
+        super(x,y,c,c);
     }
     public void affiche()
     {
