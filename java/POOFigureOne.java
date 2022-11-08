@@ -16,6 +16,11 @@ class Point
     {
         System.out.println( String.format( "Point : (%d, %d)", this.x, this.y ) );
     }
+    public void Move(int dx,int dy)
+    {
+        this.x = dx;
+        this.y = dy;
+    }
 }
 
 class Cercle extends Point
@@ -49,6 +54,11 @@ class Rectangle extends Point
     {
         System.out.println( String.format( "Rectangle : (%d, %d) longeur=%d, largeur=%d", this.x, this.y, this.largeur,this.longeur ) );
     }
+
+    public int surface()
+    {
+        return(this.largeur * this.longeur);
+    }
 }
 
 class Carre extends Rectangle
@@ -75,18 +85,17 @@ class  POOFigureOne {
 
         Point p1 = new Point( 5, 6 );
         p1.affiche();
-        // (5, 6)
-
+        p1.Move(10,15);
+        p1.affiche();
         Cercle c1 = new Cercle( 11, 61, 45 );
         c1.affiche();
-        // (5, 6)
     
         Carre k1 = new Carre( 18, -3, 15 );
         k1.affiche();
-        // Carre : (5, 6) cote=15
         Rectangle r1 = new Rectangle( 3, 19, 99, 18 );
         r1.affiche();
-        // Rectangle : (5, 6) long=99 lar=18
-        
+        r1.Move(100, 100);
+        r1.affiche();
+        System.out.println("surface = " + r1.surface());
     }
 }
